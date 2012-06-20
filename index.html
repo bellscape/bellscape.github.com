@@ -1,1 +1,15 @@
-hello
+---
+layout: default
+title: bell.log(knol)
+---
+{% for post in site.posts %}
+<hr>
+<h2>{{ post.title }}</h2>
+    <p class="alt-font tight">
+      Posted in&nbsp;
+      {% for category in post.categories %}
+      <span>{{ category }}</span>
+      {% endfor %}
+    </p>
+      {{ post.content }}
+{% endfor %}
